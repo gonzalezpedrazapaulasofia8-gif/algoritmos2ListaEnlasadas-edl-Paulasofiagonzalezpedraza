@@ -1,48 +1,28 @@
 package ListasEnlasadas;
 
-    public class Main {
+public class Main {
+
     public static void main(String[] args) {
+        ListaEnlazadas historial = new ListaEnlazadas();
+        historial.InsertarAlFinal("fronteo");
+        historial.InsertarAlFinal("gatita ganster");
+        historial.InsertarAlFinal("chica baila");
+        historial.InsertarAlFinal("bastardo");
+        historial.InsertarAlFinal("elBiper");
 
-        ListaEnlazada lista = new ListaEnlazada();
+        System.out.println("---------------");
+        System.out.println("mostramos la lista de canciones");
+        historial.mostrar();
+        System.out.println("------------------");
+        System.out.println("elminamos la primera reproduccion");
+        historial.EliminarAlInicio();
+        historial.mostrar();
+        System.out.println("------------------");
+        System.out.println("buscamos una cancion en especifico");
+        System.out.println(historial.buscar("bastardo"));
+        historial.mostrar();
 
-        // 🎵 Agregar canciones
-        lista.insertarAlFinal("bella");
-        lista.insertarAlFinal("la playa");
-        lista.insertarAlFinal("Tusa");
-        lista.insertarAlFinal("california");
-        lista.insertarAlFinal("besos usados");
 
-        System.out.println("Historial de canciones:");
-        lista.mostrar();
-
-        //  primera eliminada
-        System.out.println("\nEliminando primera canción...");
-        lista.eliminarAlInicio();
-        lista.mostrar();
-
-        //  Buscar canción
-        System.out.println("\n¿Está 'Tusa'?");
-        System.out.println(lista.buscar("Tusa"));
-
-        // Tamaño
-        System.out.println("\nTamaño de la lista: " + lista.tamanio());
-
-        //  Obtener por índice
-        System.out.println("Canción en posición 1: " + lista.obtenerPorIndice(1));
-
-        //  Eliminar por valor
-        System.out.println("\nEliminando 'Despacito'...");
-        lista.eliminarPorValor("Despacito");
-        lista.mostrar();
-
-        //  Invertir lista
-        System.out.println("\nLista invertida:");
-        lista.invertir();
-        lista.mostrar();
-
-        //  Detectar ciclo
-        System.out.println("\n¿Tiene ciclo?");
-        System.out.println(lista.detectarCiclo());
     }
-}
 
+}
