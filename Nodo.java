@@ -1,7 +1,6 @@
 package ListasEnlasadas;
 
 public class Nodo {
-
     String dato;
     Nodo siguiente;
 

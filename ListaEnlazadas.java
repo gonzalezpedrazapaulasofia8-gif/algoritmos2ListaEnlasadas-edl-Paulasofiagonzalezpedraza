@@ -1,6 +1,7 @@
 package ListasEnlasadas;
 
-public class ListaEnlazadas {
+
+public class ListaEnlazadas extends  Nodo {
 
     private Nodo cabeza;
     private int tamanio;
